@@ -4,7 +4,7 @@ import './index.css';
 import Layout from './layouts/Layout.jsx';
 import Login, {action as actionLogin} from './pages/Login.jsx';
 import RequestEnterSystem, { action as actionEnterSystem } from './pages/RequestEnterSystem.jsx';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage.jsx';
 
 
@@ -24,7 +24,7 @@ export const App = () => {
     }
   }, [theme]);
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: '/',
       element: <Layout  />,
